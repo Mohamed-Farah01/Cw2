@@ -62,7 +62,7 @@ app.post("/search/collection/lessons/", (req, res) => {
       search = {};
     }
 
-    db.collection(req.params.collectionName)
+    db.collection("lessons")
       .find(search)
       .sort({ [sort]: order })
       .toArray()
